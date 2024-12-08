@@ -7,8 +7,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc --build",
-    "start": "node dist/index.js",
-    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts"
+    "syarntart": "node dist/index.js",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
+    "debug":"yarn run dev"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
