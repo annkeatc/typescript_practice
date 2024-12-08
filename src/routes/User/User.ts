@@ -1,13 +1,13 @@
-import { Router, Request, Response } from "express";
+import {Router, Request, Response } from "express";
 import { addUser, getUserById, getUsers } from "../../handlers/User/User";
 
-const Route = Router();
+const UserRoute = Router();
 
-Route.get("/", getUsers);
-Route.get(
+UserRoute.get("/", getUsers as (request: Request, response: Response) => void);
+UserRoute.get(
   "/:id",
   getUserById as (request: Request, response: Response) => void
 );
-Route.post("/", addUser as (request: Request, response: Response) => void);
+UserRoute.post("/", addUser as (request: Request, response: Response) => void);
 
-export default Route;
+export default UserRoute;

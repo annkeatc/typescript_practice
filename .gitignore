@@ -1,2 +1,5 @@
 # ignore all the package in the node_modules folder,to prevent huge file upload 
 node_modules/
+
+#ignore build
+dist/
